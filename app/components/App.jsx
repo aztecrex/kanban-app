@@ -21,6 +21,16 @@ export default class App extends React.Component {
         }
       ]
     };
+    this.addNote = this.addNote.bind(this);
+  }
+
+  addNote() {
+    this.setState({
+      notes: this.state.notes.concat([{
+        id: uuid.v4(),
+        task: 'New task'
+      }])
+    });
   }
 
   render() {
@@ -28,6 +38,7 @@ export default class App extends React.Component {
 
     return (
       <div>
+        <button onClick={this.addNote}>+</button>
         <ul>{notes.map(note =>
           <li key={note.id}>{note.task}</li>
         )}</ul>
