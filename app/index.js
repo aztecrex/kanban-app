@@ -1,6 +1,6 @@
-require ('./main.css')
-var component = require('./component');
-var app = document.createElement('div');
+const component = require('./component');
+const app = document.createElement('div');
+require('./main.css');
 
 document.body.appendChild(app);
 
