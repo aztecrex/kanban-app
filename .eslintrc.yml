@@ -2,5 +2,6 @@ extends: airbnb
 rules:
   comma-dangle: ["error","never"]
   func-names: "off"
+  react/prop-types: "off"
 plugins:
   - react
